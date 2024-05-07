@@ -87,7 +87,6 @@ class TestCases(unittest.TestCase):
         mock_response = MagicMock()
         mock_response.read.return_value = b"<html><body><table class='data-table'></table></body></html>"
         mock_urlopen.return_value = mock_response
-
         result = f_625('http://example.com/empty_table_page.html')
         self.assertEqual(result, 'scraped_data.csv')
 

@@ -32,41 +32,6 @@ def f_626(config_path: str) -> dict:
 
 import unittest
 import json
-
-import os
-import json
-
-def f_626(config_path: str) -> dict:
-    """
-    Load a JSON configuration file and return the configuration dictionary.
-    
-    Args:
-    - config_path (str): Path to the configuration file.
-    
-    Returns:
-    - config (dict): Configuration dictionary loaded from the file.
-    
-    Requirements:
-    - os
-    - json
-    
-    Raises:
-    - FileNotFoundError: If the provided configuration file does not exist.
-    
-    Example:
-    >>> f_626("config.json")
-    {'key': 'value', 'setting': True}
-    """
-    if not os.path.isfile(config_path):
-        raise FileNotFoundError(f"The configuration file {config_path} does not exist.")
-    
-    with open(config_path) as f:
-        config = json.load(f)
-    
-    return config
-
-import unittest
-import json
 import tempfile
 
 class TestCases(unittest.TestCase):
